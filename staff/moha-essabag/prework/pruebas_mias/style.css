@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.mondrian {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Divide en 4 columnas */
+    grid-template-rows: repeat(4, 1fr);    /* Divide en 4 filas */
+    width: 38vw; /* El cuadrado ocupa el 38% del ancho de la pantalla */
+    height: 38vw; /* Mantiene la proporción cuadrada */
+    gap: 2px; /* Espacio entre los bloques */
+    background-color: #ffffff; /* Fondo blanco para los bloques */
+}
+
+.block {
+    background-color: transparent; /* Fondo transparente para que se vean los colores de los bloques */
+    border: 2px solid black; /* Bordes delgados de 2px */
+}
+
+/* Colores */
+.green { background-color: #2a9d8f; }
+.red { background-color: #e76f51; }
+.black { background-color: #333333; }
+.blue { background-color: #1d3557; }
+.yellow { background-color: #f1faee; }
+.white { background-color: #ffffff; }
+
+/* Distribución de bloques en la cuadrícula */
+.block:nth-child(1) {
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+}
+
+.block:nth-child(2) {
+    grid-column: 3 / 5;
+    grid-row: 1 / 2;
+}
+
+.block:nth-child(3) {
+    grid-column: 3 / 5;
+    grid-row: 2 / 3;
+}
+
+.block:nth-child(4) {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+}
+
+.block:nth-child(5) {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+}
+
+.block:nth-child(6) {
+    grid-column: 3 / 4;
+    grid-row: 3 / 5;
+}
+
+.block:nth-child(7) {
+    grid-column: 4 / 5;
+    grid-row: 3 / 4;
+}
+
+.block:nth-child(8) {
+    grid-column: 4 / 5;
+    grid-row: 4 / 5;
+}
+
+.block:nth-child(9) {
+    grid-column: 2 / 4;
+    grid-row: 2 / 3;
+}
+
+.block:nth-child(10) {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+.block:nth-child(11) {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.block:nth-child(12) {
+    grid-column: 3 / 4;
+    grid-row: 4 / 5;
+}
+
+.block:nth-child(13) {
+    grid-column: 4 / 5;
+    grid-row: 2 / 3;
+}

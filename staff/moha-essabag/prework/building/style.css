@@ -1,0 +1,150 @@
+/* casa*/
+* {
+    box-sizing: border-box;
+}
+
+.wall {
+    background-color: red;
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    position: absolute;
+    top: 100px;
+    left: 8px;
+    top: 40px;
+}
+
+.arrow-up {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 32px solid transparent;
+    border-bottom: 20px solid black;
+    position: absolute;
+    top: 18px;
+}
+
+.door {
+    width: 10px;
+    height: 15px;
+    border: 1px solid black;
+    position: absolute;
+    top: 73px;
+    left: 27px;
+}
+
+.window-container {
+    width: 10px;
+    height: 10px;
+    border: 1px solid black;
+    background-color: aqua;
+    position: absolute;
+    top: 50px;
+    left: 15px;
+    display: flex;
+    flex-direction: row;
+}
+
+.window {
+    width: 50%;
+    height: 100%;
+    border: 1px dotted black;
+}
+
+.volley-pitch {
+    width: 20px;
+    height: 30px;
+    border: 1px solid black;
+    position: absolute;
+    top: 100px;
+    display: flex;
+    flex-direction: column;
+    transform: rotateX(180deg);
+}
+
+/* jardín */
+.garden {
+    position: relative;
+    width: 300px;
+    height: 150px;
+    margin-top: 140px;
+    /*Ajustar el margen para que quede debajo de la casa*/
+}
+
+.grass {
+    width: 100%;
+    height: 100px;
+    background-color: #32CD32;
+    border-top: 2px solid black;
+}
+
+/* flores */
+.flower {
+    width: 20px;
+    height: 20px;
+    background-color: pink;
+    position: absolute;
+    border-radius: 50%;
+    border: 2px solid red;
+}
+
+.flower1 {
+    bottom: 20px;
+    left: 40px;
+}
+
+.flower2 {
+    bottom: 20px;
+    left: 70px;
+}
+
+/* arbol */
+.tree {
+    position: absolute;
+    bottom: 10px;
+    right: 50px;
+    width: 40px;
+    height: 80px;
+    background-color: brown;
+    border-radius: 0 0 10px 10px;
+}
+
+.tree::before {
+    content: '';
+    position: absolute;
+    top: -40px;
+    left: -30px;
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    border-radius: 50%;
+}
+
+/* cartel */
+.property-sign {
+    position: absolute;
+    top: 88px;
+    /* Ajuste de alineacion */
+    left: 70px;
+    /* Ajustar para que esté al lado de la casa */
+    background-color: rgb(239, 125, 125);
+    border: 2px solid rgb(0, 0, 0);
+    padding: 4px;
+    font-size: 8px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+/*palo*/
+.property-pole {
+    position: absolute;
+    top: calc(88px + 20px);
+    /*88px es alineacion del cartel y el 20px es el faltante para ajuntarlos*/
+    left: 109px;
+    /*izquierda*/
+    width: 2px;
+    /*anchura*/
+    height: 32px;
+    /* altura */
+    background-color: black;
+}

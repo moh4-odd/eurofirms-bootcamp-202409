@@ -1,0 +1,197 @@
+/* Configuración básica para asegurarse de que todos los elementos mantengan el mismo modelo de caja */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* El cuerpo de la página está centrado horizontal y verticalmente */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Altura completa de la ventana */
+}
+
+/* Contenedor envolvente que contiene los dos Mondrian */
+.wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 50px; /* Espacio de 50px entre los dos contenedores */
+}
+
+/* Estilos comunes para los dos Mondrian (tamaño de 100x100 px) */
+.main-container, .mondrian-container {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- ESTILOS PARA EL PRIMER MONDRIAN (Diseño Original) --- */
+
+/* Primera fila del primer Mondrian */
+.row-1 {
+    width: 100%;
+    height: 60%; /* Ocupa el 60% de la altura total */
+    background-color: blue;
+    border-bottom: 1px solid black;
+    display: flex;
+    flex-direction: row;
+}
+
+/* Segunda fila del primer Mondrian */
+.row-2 {
+    width: 100%;
+    height: 40%; /* Ocupa el 40% de la altura total */
+    background-color: orange;
+    border-top: 1px solid black;
+    display: flex;
+    flex-direction: row;
+}
+
+/* Celdas individuales dentro de la segunda fila */
+.cell-c {
+    width: 30%; /* Ocupa el 30% del ancho de la fila */
+    height: 100%; /* Altura completa de la fila */
+    background-color: palevioletred;
+}
+
+.cell-d {
+    width: 50%; /* Ocupa el 50% del ancho */
+    height: 100%;
+    background-color: brown;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.cell-e {
+    width: 20%; /* Ocupa el 20% del ancho */
+    height: 100%;
+    background-color: aqua;
+}
+
+/* Columnas de la primera fila */
+.column-1 {
+    width: 30%; /* Columna que contiene las celdas A y B */
+    height: 100%;
+    background-color: green;
+}
+
+.column-2 {
+    width: 70%; /* Ocupa el 70% del ancho de la fila */
+    height: 100%;
+    background-color: red;
+    border-left: 1px solid black;
+}
+
+/* Celdas A y B dentro de la columna-1 */
+.cell-a {
+    width: 100%;
+    height: 60%; /* Celda A ocupa el 60% de la columna */
+    background-color: #7432a6;
+    border-bottom: 1px solid black;
+}
+
+.cell-b {
+    width: 100%;
+    height: 40%; /* Celda B ocupa el 40% de la columna */
+    background-color: sandybrown;
+}
+
+/* --- ESTILOS PARA EL SEGUNDO MONDRIAN (Más Complicado) --- */
+
+/* Primera fila del segundo Mondrian */
+.mondrian-row-1 {
+    width: 100%;
+    height: 40%; /* Ocupa el 40% de la altura total */
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid black;
+}
+
+/* Primera columna de la primera fila (contiene dos celdas) */
+.mondrian-column-1 {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid black;
+}
+
+/* Celda 1 (parte superior de la primera columna) */
+.mondrian-cell-1 {
+    width: 100%;
+    height: 50%; /* Ocupa el 50% de la columna */
+    background-color: yellow;
+}
+
+/* Celda 2 (parte inferior de la primera columna) */
+.mondrian-cell-2 {
+    width: 100%;
+    height: 50%;
+    background-color: purple;
+}
+
+/* Segunda columna de la primera fila */
+.mondrian-column-2 {
+    width: 40%; /* Más ancha que la primera columna */
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid black;
+}
+
+/* Celda 3 (parte superior de la segunda columna) */
+.mondrian-cell-3 {
+    width: 100%;
+    height: 60%; /* Celda más alta en esta columna */
+    background-color: lightblue;
+}
+
+/* Celda 4 (parte inferior de la segunda columna) */
+.mondrian-cell-4 {
+    width: 100%;
+    height: 40%; /* Celda más baja en esta columna */
+    background-color: pink;
+}
+
+/* Tercera columna de la primera fila */
+.mondrian-column-3 {
+    width: 40%; /* Una única celda que ocupa toda la columna */
+    background-color: lightgreen;
+}
+
+/* Segunda fila del segundo Mondrian */
+.mondrian-row-2 {
+    width: 100%;
+    height: 40%; /* Segunda fila, ocupando el 40% de la altura total */
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid black;
+}
+
+/* Celdas en la segunda fila */
+.mondrian-cell-5 {
+    width: 30%; /* Primera celda de la segunda fila */
+    background-color: orange;
+    border-right: 1px solid black;
+}
+
+.mondrian-cell-6 {
+    width: 50%; /* Segunda celda de la segunda fila */
+    background-color: cyan;
+    border-right: 1px solid black;
+}
+
+.mondrian-cell-7 {
+    width: 20%; /* Última celda de la segunda fila */
+    background-color: lightcoral;
+}
+
+/* Tercera fila del segundo Mondrian (una única celda) */
+.mondrian-row-3 {
+    width: 100%;
+    height: 20%; /* Fila más pequeña, ocupando el 20% del total */
+    background-color: #7432a6;
+}
